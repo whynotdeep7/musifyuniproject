@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="png" href="images/music-player-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Musify</title>
+    <style>
+        :root {
+            --bg_color_1: #070130;
+            --bg_color_2: #0d0065;
+            --bg_color_3: #222b5c;
+            --bg_music_bar: #2b2b2a;
+            --font_color_1: white;
+            --font_color_2: lightgrey;
+            --font_color_3: #1DB954;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--bg_color_1), var(--bg_color_2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--font_color_1);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 40px;
+            width: 400px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--font_color_2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--font_color_2);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--font_color_1);
+            transition: background 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .login-btn {
+            background: var(--font_color_3);
+            color: var(--font_color_1);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: inline-block; /* make it behave like a button */
+        }
+
+        .login-btn:hover {
+            background: #1AAE42; /* Lighter for hover effect */
+            transform: scale(1.05);
+        }
+
+        .continue-btn {
+            background: rgba(255, 255, 255, 0.3);
+    color: var(--font_color_1);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.continue-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+        .signup-link {
+            margin-top: 10px;
+        }
+
+        .signup-link a {
+            color: var(--font_color_3);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form" action="index.html" method="GET">
+            <img src="music-player-logo.png" style="height: 50px; width: 50px;border-radius: 100%;"><h1>Musify</h1>
+            <p class="tagline">Your music, your way.</p>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+           <a href="index.html"><button type="button" class="continue-btn">Continue Without Login</button></a>
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+    </div>
+</body>
+</html>
